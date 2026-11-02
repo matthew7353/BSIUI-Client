@@ -1,0 +1,88 @@
+.auth-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+
+  h1 {
+    font-size: 32px;
+    letter-spacing: -0.64px;
+    margin: 0 0 8px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 15px;
+    color: var(--text-h);
+  }
+
+  input {
+    padding: 10px 12px;
+    font: inherit;
+    color: var(--text-h);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+  }
+
+  input:focus {
+    outline: 2px solid var(--accent-border);
+    outline-offset: -1px;
+    border-color: var(--accent);
+  }
+
+  button {
+    padding: 10px 12px;
+    font: inherit;
+    font-weight: 500;
+    color: var(--on-accent);
+    background: var(--accent);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  button:hover:not(:disabled) {
+    filter: brightness(1.1);
+  }
+
+  button:focus-visible {
+    outline: 2px solid var(--accent-border);
+    outline-offset: 2px;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  a {
+    color: var(--accent);
+  }
+}
+
+.auth-error {
+  font-size: 15px;
+  color: var(--error);
+}
+
+.auth-switch {
+  font-size: 15px;
+  text-align: center;
+}
